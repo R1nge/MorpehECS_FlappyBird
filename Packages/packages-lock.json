@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.farco.morpeh.helpers": {
+      "version": "https://github.com/SH42913/morpeh.helpers.git?path=/Assets/Morpeh.Helpers",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "dd51c9e013005ead0e794edf0cd95728f5c893da"
+    },
     "com.scellecs.morpeh": {
       "version": "https://github.com/scellecs/morpeh.git#2022.2.3",
       "depth": 0,

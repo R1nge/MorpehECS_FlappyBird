@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.farco.morpeh.helpers": "https://github.com/SH42913/morpeh.helpers.git?path=/Assets/Morpeh.Helpers",
     "com.scellecs.morpeh": "https://github.com/scellecs/morpeh.git#2022.2.3",
     "com.unity.collab-proxy": "2.0.4",
     "com.unity.feature.2d": "1.0.0",
