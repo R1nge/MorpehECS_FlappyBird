@@ -14,7 +14,6 @@ namespace FlappyBird.Code.Movement
         protected override void Process(Entity entity, ref Player player, ref MoveDirection moveDirection, in float deltaTime)
         {
             var direction = moveDirection.direction;
-            player.rigidbody.angularVelocity = 0;
 
             if (direction != Vector2.zero)
             {
