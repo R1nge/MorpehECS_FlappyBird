@@ -367,6 +367,7 @@ MonoBehaviour:
   initializers:
   - {fileID: 11400000, guid: f72101f667ab04f4984e5329d8adc853, type: 2}
   - {fileID: 11400000, guid: 0d25293c65c0aad4da23883f280006a2, type: 2}
+  - {fileID: 11400000, guid: d3f9f539b95ff2b4088d373f52e0c836, type: 2}
   updateSystems:
   - enabled: 1
     system: {fileID: 11400000, guid: 877cc0c327ec4de46885a81e7fa89bac, type: 2}
@@ -375,7 +376,11 @@ MonoBehaviour:
   - enabled: 1
     system: {fileID: 11400000, guid: aaea64ac354869348b6c671d4f459bf1, type: 2}
   fixedUpdateSystems: []
-  lateUpdateSystems: []
+  lateUpdateSystems:
+  - enabled: 1
+    system: {fileID: 11400000, guid: 02e45b95f0923974a9cc74328a18f78f, type: 2}
+  - enabled: 1
+    system: {fileID: 11400000, guid: c07bfc5af86a078428ea70dd826dc844, type: 2}
   cleanupSystems: []
 --- !u!4 &732879900
 Transform:
