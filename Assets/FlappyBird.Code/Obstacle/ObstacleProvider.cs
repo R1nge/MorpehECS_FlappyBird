@@ -4,20 +4,19 @@ using Scellecs.Morpeh.Providers;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
 
-namespace FlappyBird.Code
+namespace FlappyBird.Code.Obstacle
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    [RequireComponent(typeof(Rigidbody2D))]
-    public sealed class PlayerProvider : MonoProvider<Player>
+    public sealed class ObstacleProvider : MonoProvider<Obstacle>
     {
     }
 
     [Serializable]
-    public struct Player : IComponent
+    public struct Obstacle : IComponent
     {
-        public PlayerConfig playerConfig;
-        public Rigidbody2D rigidbody;
+        public ObstacleConfig obstacleConfig;
+        public Transform transform;
     }
 }
