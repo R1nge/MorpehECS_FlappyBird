@@ -12,4 +12,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab2372fa25d5634cbc2ed36f6d53277, type: 3}
   m_Name: ObstacleHitSystem
   m_EditorClassIdentifier: 
-  gameOverEvent: {fileID: 11400000, guid: 0b408094ce6ceb84aa436854cb767bc6, type: 2}

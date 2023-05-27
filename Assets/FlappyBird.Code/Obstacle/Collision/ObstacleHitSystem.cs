@@ -11,7 +11,7 @@ namespace FlappyBird.Code.Obstacle.Collision
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     [CreateAssetMenu(menuName = "ECS/Systems/" + nameof(ObstacleHitSystem))]
-    public sealed class ObstacleHitSystem : SimpleLateUpdateSystem<CollisionEvent>
+    public sealed class ObstacleHitSystem : SimpleUpdateSystem<CollisionEvent>
     {
         protected override void Process(Entity entity, ref CollisionEvent collisionEvent, in float deltaTime)
         {
@@ -22,6 +22,7 @@ namespace FlappyBird.Code.Obstacle.Collision
                 return;
             }
 
+            collisionEvent.second.GetComponent<Player.Player>();
             World.CreateEntity().AddComponent<GameOverEvent>();
         }
     }

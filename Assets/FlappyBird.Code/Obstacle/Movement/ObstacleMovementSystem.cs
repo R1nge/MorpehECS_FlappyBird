@@ -17,6 +17,11 @@ namespace FlappyBird.Code.Obstacle.Movement
             moveDirection.direction = Vector2.left;
             var moveVector3 = new Vector3(moveDirection.direction.x * obstacle.obstacleConfig.moveSpeed, 0, 0);
             obstacle.transform.position += moveVector3 * deltaTime;
+
+            if (obstacle.transform.position.x <= -3.5f)
+            {
+                obstacle.transform.position = new(3.5f, Random.Range(-3.5f, 3.5f), obstacle.transform.position.z);
+            }
         }
     }
 }

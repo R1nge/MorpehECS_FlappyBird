@@ -3,15 +3,26 @@ using UnityEngine;
 
 namespace FlappyBird.Code.Collision
 {
-    [RequireComponent(typeof(BoxCollider2D))]
     public class CollisionDetector : MonoBehaviour
     {
+        public Collider2D[] colliders;
         public Entity listener;
         private World _world;
 
         public void Init(World world)
         {
             _world = world;
+        }
+
+        private void OnEnable()
+        {
+            colliders = GetComponentsInChildren<Collider2D>();
+#if DEBUG
+            if (colliders.Length <= 0)
+            {
+                throw new($"There are no any Colliders to handle collisions on {name}");
+            }
+#endif
         }
 
         private void OnCollisionEnter2D(Collision2D other)

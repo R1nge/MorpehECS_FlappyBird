@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1eb7fda82861a440bfae50c578af54d, type: 3}
   m_Name: GameOverSystem
   m_EditorClassIdentifier: 
-  gameOverEvent: {fileID: 11400000, guid: 0b408094ce6ceb84aa436854cb767bc6, type: 2}
+  onGameOverEvent: {fileID: 11400000, guid: 7f5853e2cf85f884a9fd49e1890b952f, type: 2}

@@ -1,5 +1,6 @@
 using Scellecs.Morpeh;
-using Scellecs.Morpeh.Helpers;
+using Scellecs.Morpeh.Globals.Events;
+using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
 
@@ -9,19 +10,21 @@ namespace FlappyBird.Code.GameFlow
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     [CreateAssetMenu(menuName = "ECS/Systems/" + nameof(GameOverSystem))]
-    public sealed class GameOverSystem : SimpleLateUpdateSystem<GameOverEvent>
+    public sealed class GameOverSystem : UpdateSystem
     {
-        private Filter _gameOverEventFilter;
+        public GlobalEvent onGameOverEvent;
+        private Filter _filter;
 
-        protected override void Process(Entity entity, ref GameOverEvent gameOver, in float deltaTime)
+        public override void OnAwake()
         {
-            _gameOverEventFilter = World.Filter.With<GameOverEvent>();
-            foreach (var gameOverEntity in _gameOverEventFilter)
+            _filter = World.Filter.With<GameOverEvent>();
+        }
+
+        public override void OnUpdate(float deltaTime)
+        {
+            foreach (var entity in _filter)
             {
-                //TODO: show UI
-                Debug.Log("Gameover");
-                World.RemoveEntity(gameOverEntity);
-                Time.timeScale = 0;
+                onGameOverEvent.Publish();
             }
         }
     }

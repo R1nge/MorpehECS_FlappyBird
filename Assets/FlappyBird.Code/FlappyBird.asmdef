@@ -2,7 +2,9 @@
     "name": "FlappyBird",
     "rootNamespace": "",
     "references": [
-        "GUID:3377deebfb0acde45876d12c6e3d27cc"
+        "GUID:3377deebfb0acde45876d12c6e3d27cc",
+        "GUID:2468f075b35534dec93e1aa84a70df05",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

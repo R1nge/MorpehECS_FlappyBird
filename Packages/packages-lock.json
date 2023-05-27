@@ -14,6 +14,13 @@
       "dependencies": {},
       "hash": "58a616fcfe3c30689661a921d9e8e80e30c4348d"
     },
+    "com.scellecs.morpeh.globals": {
+      "version": "https://github.com/scellecs/morpeh.globals.git#2022.2.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "693353b04a4dc4f53fe34426e7ce6813c82f0090"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.10",
       "depth": 1,
