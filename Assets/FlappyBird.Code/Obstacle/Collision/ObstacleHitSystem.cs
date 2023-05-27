@@ -1,4 +1,5 @@
 using FlappyBird.Code.Collision;
+using FlappyBird.Code.GameFlow;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Helpers;
 using Unity.IL2CPP.CompilerServices;
@@ -16,6 +17,12 @@ namespace FlappyBird.Code.Obstacle.Collision
         {
             var obstacleEntity = collisionEvent.first;
             obstacleEntity.GetComponent<Obstacle>(out var isObstacle);
+            if (!isObstacle)
+            {
+                return;
+            }
+
+            World.CreateEntity().AddComponent<GameOverEvent>();
         }
     }
 }
