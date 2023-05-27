@@ -53,6 +53,10 @@ MonoBehaviour:
   - enabled: 1
     system: {fileID: 11400000, guid: 02e45b95f0923974a9cc74328a18f78f, type: 2}
   - enabled: 1
+    system: {fileID: 11400000, guid: 90aa32e55398e5f42bb9f921b11501a4, type: 2}
+  - enabled: 1
+    system: {fileID: 11400000, guid: e4eedfc4283fbb245bde77ab7d60dfe7, type: 2}
+  - enabled: 1
     system: {fileID: 11400000, guid: aaea64ac354869348b6c671d4f459bf1, type: 2}
   - enabled: 1
     system: {fileID: 11400000, guid: 877cc0c327ec4de46885a81e7fa89bac, type: 2}
@@ -60,6 +64,8 @@ MonoBehaviour:
     system: {fileID: 11400000, guid: 311450518cd09384194341d728d5be7f, type: 2}
   - enabled: 1
     system: {fileID: 11400000, guid: f53ebf17d5f3934499b711b1e602a9f1, type: 2}
+  - enabled: 1
+    system: {fileID: 11400000, guid: 2b0b043595508e046b8e5a186871e804, type: 2}
   fixedUpdateSystems: []
   lateUpdateSystems: []
   cleanupSystems:
@@ -67,3 +73,5 @@ MonoBehaviour:
     system: {fileID: 11400000, guid: c07bfc5af86a078428ea70dd826dc844, type: 2}
   - enabled: 1
     system: {fileID: 11400000, guid: 8b68cac20f3c12a41b4ab6c7585b72a7, type: 2}
+  - enabled: 1
+    system: {fileID: 11400000, guid: 6d1ff09ce3d1c18408bc59601d2313c5, type: 2}

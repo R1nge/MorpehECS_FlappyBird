@@ -15,10 +15,20 @@ namespace FlappyBird.Code.UI
     {
         public GlobalEvent onGameOverEvent;
         private Filter _gameOverScreenFilter;
+        private bool _gameEnded;
 
         public override void OnAwake()
         {
             _gameOverScreenFilter = World.Filter.With<GameOverScreen>();
+            foreach (var entity in _gameOverScreenFilter)
+            {
+                var screen = entity.GetComponent<GameOverScreen>();
+                screen.restartButton.onClick.AddListener(() =>
+                {
+                    Time.timeScale = 1;
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                });
+            }
         }
 
         public override void OnUpdate(float deltaTime)
@@ -27,9 +37,9 @@ namespace FlappyBird.Code.UI
             {
                 foreach (var entity in _gameOverScreenFilter)
                 {
-                    entity.GetComponent<GameOverScreen>().gameOverScreen.SetActive(true);
-                    //Time.timeScale = 0;
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    var gameOverScreen = entity.GetComponent<GameOverScreen>();
+                    gameOverScreen.gameOverScreen.SetActive(true);
+                    gameOverScreen.highScoreText.text = $"High score: {PlayerPrefs.GetInt("HighScore", 0)}";
                 }
             }
         }

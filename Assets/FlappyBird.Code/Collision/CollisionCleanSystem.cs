@@ -12,10 +12,12 @@ namespace FlappyBird.Code.Collision
     public sealed class CollisionCleanSystem : CleanupSystem
     {
         private Filter _collisionFilter;
+        private Filter _triggerFilter;
 
         public override void OnAwake()
         {
             _collisionFilter = World.Filter.With<CollisionEvent>();
+            _triggerFilter = World.Filter.With<TriggerEvent>();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -23,6 +25,13 @@ namespace FlappyBird.Code.Collision
             foreach (var entity in _collisionFilter)
             {
                 entity.RemoveComponent<CollisionEvent>();
+                World.RemoveEntity(entity);
+            }
+
+            foreach (var entity in _triggerFilter)
+            {
+                entity.RemoveComponent<TriggerEvent>();
+                World.RemoveEntity(entity);
             }
         }
     }

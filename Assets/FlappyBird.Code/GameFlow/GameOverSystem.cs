@@ -25,6 +25,7 @@ namespace FlappyBird.Code.GameFlow
             foreach (var entity in _filter)
             {
                 onGameOverEvent.Publish();
+                Time.timeScale = 0;
             }
         }
     }

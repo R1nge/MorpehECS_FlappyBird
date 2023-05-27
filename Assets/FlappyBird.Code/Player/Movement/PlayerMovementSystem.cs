@@ -26,6 +26,7 @@ namespace FlappyBird.Code.Player.Movement
             if (player.rigidbody.transform.position.y is > 5 or < -5)
             {
                 World.CreateEntity().AddComponent<GameOverEvent>();
+                World.RemoveEntity(entity);
             }
         }
     }

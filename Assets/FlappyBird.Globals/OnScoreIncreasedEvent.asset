@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e9acac1a6d0ef142958e507361c6c2f, type: 3}
-  m_Name: MovementSystem
+  m_Script: {fileID: 11500000, guid: 3f4db3f3b31c4839b612dab5baea5823, type: 3}
+  m_Name: OnScoreIncreasedEvent
   m_EditorClassIdentifier: 
+  internalEntityID: -1

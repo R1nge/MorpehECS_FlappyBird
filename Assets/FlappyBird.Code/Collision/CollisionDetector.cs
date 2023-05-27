@@ -41,5 +41,21 @@ namespace FlappyBird.Code.Collision
             var otherDetector = other.gameObject.GetComponent<CollisionDetector>();
             collisionEvent.second = otherDetector != null ? otherDetector.listener : null;
         }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+#if DEBUG
+            if (listener == null || !listener.Has<CanCollide>())
+            {
+                throw new($"{nameof(listener)} should have {nameof(CanCollide)}");
+            }
+#endif
+            var eventEntity = _world.CreateEntity();
+            ref var triggerEvent = ref eventEntity.AddComponent<TriggerEvent>();
+            triggerEvent.collider = other;
+            triggerEvent.first = listener;
+            var otherDetector = other.gameObject.GetComponent<CollisionDetector>();
+            triggerEvent.second = otherDetector != null ? otherDetector.listener : null;
+        }
     }
 }
