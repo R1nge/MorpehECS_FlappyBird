@@ -15,7 +15,7 @@ namespace FlappyBird.Code.Score
 
         public override void OnAwake()
         {
-            _increaseScoreEventFilter = World.Filter.With<IncreaseScoreEvent>();
+            _increaseScoreEventFilter = World.Filter.With<ScoreIncreaseEvent>();
         }
 
         public override void OnUpdate(float deltaTime)

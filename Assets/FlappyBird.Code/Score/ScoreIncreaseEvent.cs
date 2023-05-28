@@ -8,7 +8,7 @@ namespace FlappyBird.Code.Score
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    public struct IncreaseScoreEvent : IComponent
+    public struct ScoreIncreaseEvent : IComponent
     {
     }
 }

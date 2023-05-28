@@ -22,7 +22,7 @@ namespace FlappyBird.Code.Score
             }
 
             triggerEvent.second.GetComponent<Player.Player>();
-            World.CreateEntity().AddComponent<IncreaseScoreEvent>();
+            World.CreateEntity().AddComponent<ScoreIncreaseEvent>();
         }
     }
 }
