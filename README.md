@@ -1,3 +1,3 @@
 # MorpehECS_FlappyBird
 
-https://github.com/R1nge/MorpehECS_FlappyBird/assets/59400159/b4badeba-e473-43e0-ab14-983be1c302d2
+![FlappyBird_MorpehECS_GIF](https://github.com/R1nge/MorpehECS_FlappyBird/assets/59400159/a51bdc0b-eb7f-4641-acf8-b6313057cffa)
