@@ -3,7 +3,6 @@ using Scellecs.Morpeh.Globals.Events;
 using Scellecs.Morpeh.Systems;
 using Unity.IL2CPP.CompilerServices;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace FlappyBird.Code.UI
 {
@@ -20,15 +19,6 @@ namespace FlappyBird.Code.UI
         public override void OnAwake()
         {
             _gameOverScreenFilter = World.Filter.With<GameOverScreen>();
-            foreach (var entity in _gameOverScreenFilter)
-            {
-                var screen = entity.GetComponent<GameOverScreen>();
-                screen.restartButton.onClick.AddListener(() =>
-                {
-                    Time.timeScale = 1;
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                });
-            }
         }
 
         public override void OnUpdate(float deltaTime)
