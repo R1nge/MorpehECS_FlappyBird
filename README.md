@@ -7,4 +7,4 @@ Just a simple clone of a popular past game, Flappy Bird, using the [Morpeh ECS F
 Repo has 3 branches:
 - Main - Morpeh 2022.2.3 requires Odin Inspector
 - Without Odin - Morpeh 2022.2.3
-- TriInspector - Morpeh 2023.1 Will use [TriInspector](https://github.com/codewriter-packages/Tri-Inspector) instead of Odin Inspector (Will be available as soon as 2023.1 version came out)
+- TriInspector - Morpeh 2023.1 Will use [TriInspector](https://github.com/codewriter-packages/Tri-Inspector) instead of Odin Inspector (Will be available as soon as 2023.1 version is released)
