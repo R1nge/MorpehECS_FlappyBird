@@ -2180,6 +2180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '[Installer] UI'
       objectReference: {fileID: 0}
+    - target: {fileID: 2689050929172810892, guid: 5597f8b4df5605642b2158ea2443cec2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2689050929172810894, guid: 5597f8b4df5605642b2158ea2443cec2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2280,6 +2284,10 @@ PrefabInstance:
     - target: {fileID: 8093599985243187605, guid: 5f5cbb4d546d38e458960db080659224, type: 3}
       propertyPath: m_Name
       value: '[Installer] Gameplay'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8093599985243187605, guid: 5f5cbb4d546d38e458960db080659224, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f5cbb4d546d38e458960db080659224, type: 3}

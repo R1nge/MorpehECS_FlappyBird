@@ -8,7 +8,6 @@ namespace FlappyBird.Code.Collision
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    [CreateAssetMenu(menuName = "ECS/Initializers/" + nameof(CollisionInitSystem))]
     public sealed class CollisionInitSystem : Initializer
     {
         private Filter _players;
