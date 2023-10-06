@@ -23,7 +23,7 @@ namespace FlappyBird.Code.Sound
 
         public override void OnUpdate(float deltaTime)
         {
-            foreach (var increaseEvent in _scoreIncreaseEventFilter)
+            foreach (var scoreIncrease in _scoreIncreaseEventFilter)
             {
                 foreach (var sound in _scoreSoundFilter)
                 {

@@ -13,18 +13,18 @@ namespace FlappyBird.Code.Score
     public sealed class ScoreSystem : UpdateSystem
     {
         public GlobalEventInt scoreIncreaseEvent;
-        private Filter _increaseScoreEventFilter;
+        private Filter _scoreIncreaseScoreEventFilter;
         private Filter _scoreFilter;
 
         public override void OnAwake()
         {
-            _increaseScoreEventFilter = World.Filter.With<ScoreIncreaseEvent>();
+            _scoreIncreaseScoreEventFilter = World.Filter.With<ScoreIncreaseEvent>();
             _scoreFilter = World.Filter.With<Score>();
         }
 
         public override void OnUpdate(float deltaTime)
         {
-            foreach (var entity in _increaseScoreEventFilter)
+            foreach (var scoreIncrease in _scoreIncreaseScoreEventFilter)
             {
                 foreach (var score in _scoreFilter)
                 {

@@ -27,7 +27,7 @@ namespace FlappyBird.Code.UI
                 foreach (var gameplayScreen in _gamePlayScreenFilter)
                 {
                     var screen = gameplayScreen.GetComponent<GamePlayScreen>();
-                    screen.scoreText.text = scoreIncreaseEvent.BatchedChanges.Pop().ToString();
+                    screen.scoreText.text = scoreIncreaseEvent.LastToString();
                 }
             }
         }
