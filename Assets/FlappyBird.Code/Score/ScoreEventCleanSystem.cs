@@ -11,18 +11,18 @@ namespace FlappyBird.Code.Score
     [CreateAssetMenu(menuName = "ECS/Systems/" + nameof(ScoreEventCleanSystem))]
     public sealed class ScoreEventCleanSystem : CleanupSystem
     {
-        private Filter _increaseScoreEventFilter;
+        private Filter _scoreIncreaseEventFilter;
 
         public override void OnAwake()
         {
-            _increaseScoreEventFilter = World.Filter.With<ScoreIncreaseEvent>();
+            _scoreIncreaseEventFilter = World.Filter.With<ScoreIncreaseEvent>();
         }
 
         public override void OnUpdate(float deltaTime)
         {
-            foreach (var entity in _increaseScoreEventFilter)
+            foreach (var scoreIncrease in _scoreIncreaseEventFilter)
             {
-                World.RemoveEntity(entity);
+                World.RemoveEntity(scoreIncrease);
             }
         }
     }

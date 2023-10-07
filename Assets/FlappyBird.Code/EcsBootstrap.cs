@@ -18,6 +18,7 @@ namespace FlappyBird.Code
         [SerializeField] private CollisionInitSystem collisionInitSystem;
         [SerializeField] private PlayerMovementInitSystem playerMovementInitSystem;
         [SerializeField] private ObstacleMovementInitSystem obstacleMovementInitSystem;
+        [SerializeField] private ScoreInitSystem scoreInitSystem;
 
         [Header("Update Systems")] 
         [SerializeField] private ObstacleHitSystem obstacleHitSystem;
@@ -51,6 +52,7 @@ namespace FlappyBird.Code
             _gamePlaySystemGroup.AddInitializer(collisionInitSystem);
             _gamePlaySystemGroup.AddInitializer(playerMovementInitSystem);
             _gamePlaySystemGroup.AddInitializer(obstacleMovementInitSystem);
+            _gamePlaySystemGroup.AddInitializer(scoreInitSystem);
             _gamePlaySystemGroup.AddSystem(obstacleHitSystem);
             _gamePlaySystemGroup.AddSystem(scoreHitSystem);
             _gamePlaySystemGroup.AddSystem(scoreSystem);
